@@ -2,38 +2,56 @@
 // array for alphabet
 // array for 0-9
 // array for special characters 
+const uppercaseEl = document.getElementById('uppercase');
+const lowercaseEl = document.getElementById('lowercase');
+const numbersEl = document.getElementById('numbers');
+const specialCharacterEl = document.getElementById('specialCharacter');
+const generateEl = document.getElementById('generate');
+const passwordEl = document.getElementById('password');
 
-const lowerCaseAlpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-const upperCaseAlpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-const symbols = ["@","!", "#", "$", "%", "^", "&", "*"];
+const randomFunction = {
+    lower: lowerCaseCodes,
+    upper: upperCaseCodes,
+    number: numberCodes,
+    specialChar: specialCharacterCodes,
+};
 
-// prompt would you like to create a password //
+generateEl.addEventListener('click', () => {
+    const length = +lengthEl.value;
+    const hasLower = lowercaseEl.checked;
+    const hasUpper = uppercaseEl.checked;
+    const hasNumber = numbersEl.checked;
+    const hasSpecialChar = specialCharacter;
 
-var generate = confirm("Are you ready?");
-if(generate) {
-    prompt(<select>lowerCaseAlpha</select>)
+    resultEl.innerText = generatePassword(
+        hasLower,
+        hasUpper,
+        hasNumber,
+        hasSpecialChar,
+        length,
+    );
+});
+function generatePassword(lower, upper, number, specialChar, length) {
+    
 }
-   
-// how many charactors would you like it to be 8-128
-    // prompt to let them choose the number
-// prompt would you like to include numbers?
-    // yes/no
-// prompt would you like special characters?
-    // yes/no
-// password has been created
-    // prompt to copy password
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+//const lowerCaseAlpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+//const upperCaseAlpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+//const symbols = ["@","!", "#", "$", "%", "^", "&", "*"];
+//learned after completing that i can create an array using char codes
+function lowerCaseCodes() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+// when called, this will return random letters, numbers and symbols
+function upperCaseCodes() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+function numberCodes() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48); 
+}
+
+function specialCharacters() {
+    const symbols = '!@#$%^&*<>'
+    return symbols[Math.floor(Math.random() * symbols.length)];
+}
+console.log(randomSymbol());

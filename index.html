@@ -17,13 +17,15 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
+          <p>may get rid!!
+            Fill out the criterea to create your new password!</p>
         </div>
 
         <div class="card-body">
  <!--prompt for how many characters-->
-          <form>
-          <label for="character-count">Choose number of characters</label>
-          <input type="number" min="8" max="128" value="50" id="input-count">
+          <form id="criteria">
+          <label for="character-count">Number of Characters?</label>
+          <input type="number" min="8" max="128" value="50" id="inputCount">
   <!--include lowercase prompt-->
           <label for="lowercase">Lowercase?</label>
           <input type="checkbox" name="" id="lowercase">
@@ -35,7 +37,7 @@
           <input type="checkbox" name="" id="numbers">
   
           <label for="special-characters">Special Characters</label>
-          <input type="checkbox" name="" id="special-characters">
+          <input type="checkbox" name="" id="specialCharacters">
   
           </form>
         </div>
@@ -53,5 +55,6 @@
     </div>
     <script src="assets\js\script.js"></script>
   </body>
+  
 
 </html>
