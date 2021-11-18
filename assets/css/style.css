@@ -135,3 +135,44 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+/*styled the form to be centered and increased the line height so the text wouldn't be so close together. Gave it a blue background to stand out */
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000099;
+  border:rgba(0, 0, 0, 0.2) 3px solid;
+  line-height: 2.5;
+}
+
+label {
+  color: #f9fbfd;
+  font-weight: bold;
+}
+
+.character-count {
+align-items: center;
+display: flex;
+}
+
+.input-count {
+  width: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.lowercase {
+
+}
+
+.uppercase {
+
+}
+.numbers {
+
+}
+
+.special-characters {
+
+}
