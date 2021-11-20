@@ -1,57 +1,32 @@
-// Assignment code here
-// array for alphabet
-// array for 0-9
-// array for special characters 
-const uppercaseEl = document.getElementById('uppercase');
-const lowercaseEl = document.getElementById('lowercase');
-const numbersEl = document.getElementById('numbers');
-const specialCharacterEl = document.getElementById('specialCharacter');
-const generateEl = document.getElementById('generate');
-const passwordEl = document.getElementById('password');
-
-const randomFunction = {
-    lower: lowerCaseCodes,
-    upper: upperCaseCodes,
-    number: numberCodes,
-    specialChar: specialCharacterCodes,
-};
-
-generateEl.addEventListener('click', () => {
-    const length = +lengthEl.value;
-    const hasLower = lowercaseEl.checked;
-    const hasUpper = uppercaseEl.checked;
-    const hasNumber = numbersEl.checked;
-    const hasSpecialChar = specialCharacter;
-
-    resultEl.innerText = generatePassword(
-        hasLower,
-        hasUpper,
-        hasNumber,
-        hasSpecialChar,
-        length,
-    );
-});
-function generatePassword(lower, upper, number, specialChar, length) {
-    
+// functions needed for number of characters
+// nubers
+function randomNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48)
 }
-//const lowerCaseAlpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-//const upperCaseAlpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-//const symbols = ["@","!", "#", "$", "%", "^", "&", "*"];
-//learned after completing that i can create an array using char codes
-function lowerCaseCodes() {
+// lowercase
+function randomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
-// when called, this will return random letters, numbers and symbols
-function upperCaseCodes() {
+
+// uppercase
+function randomUpper() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
-
-function numberCodes() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48); 
+// special symbol
+function randomSymbol() {
+    return String.fromCharCode(Math.floor(Math.random() * 15) + 33);
 }
-
-function specialCharacters() {
-    const symbols = '!@#$%^&*<>'
-    return symbols[Math.floor(Math.random() * symbols.length)];
-}
+// test results
+console.log(randomNumber());
+console.log(randomLower());
+console.log(randomUpper());
 console.log(randomSymbol());
+// event listener for numbers
+// lowercase
+// uppercase
+// special symbol
+
+// condition that you must click on one of the options
+
+// event listener for gennerate password button click
+    // when clicked, password is displayed in "your secure pw" field
