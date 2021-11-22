@@ -24,8 +24,8 @@
         <div class="card-body">
  <!--prompt for how many characters-->
           <form id="criteria">
-          <label for="character-count">Number of Characters?</label>
-          <input type="number" min="8" max="128" value="50" id="inputCount">
+          <label for="charLength">Number of Characters?</label>
+          <input type="number" min="8" max="128" value="50" onclick="alert(value)" id="charLength">
   <!--include lowercase prompt-->
           <label for="lowercase">Lowercase?</label>
           <input type="checkbox" name="" id="lowercase">
@@ -36,14 +36,14 @@
           <label for="numbers">Numbers?</label>
           <input type="checkbox" name="" id="numbers">
   
-          <label for="symbolChar">Special Characters</label>
-          <input type="checkbox" name="" id="symbolChar">
+          <label for="symbol">Special Characters</label>
+          <input type="checkbox" name="" id="symbol">
   
           </form>
         </div>
 
         <div class="card-footer">
-          <button id="generate" class="btn" onclick="generatePassword">Generate Password</button>
+          <button id="generate" class="btn" >Generate Password</button>
         </div>
 <!--moved new password area to the bottom of the container-->
         <textarea
@@ -55,6 +55,4 @@
     </div>
     <script src="assets\js\script.js"></script>
   </body>
-  
-
 </html>
